@@ -134,14 +134,19 @@ namespace TextRpg001
 
         static void Town()
         {
+
             Console.WriteLine(" ");
             Console.WriteLine("마을에서 무슨 일을 하시겠습니까?");
             Console.WriteLine("1. 주점에 들른다.");
             Console.WriteLine("2. 대장간에 들른다.");
             Console.WriteLine("3. 숙소에 들른다.");
 
-            if(Console.ReadKey().Key == ConsoleKey.D1)
-            //if문의 조건문 내부에 Console 함수를 배치함.
+            
+            ConsoleKeyInfo CKI = Console.ReadKey();
+            //Console.ReadKey 함수를 밖으로 꺼냄.
+            //ConsoleKeyInfo Struct(구조체) 중 Key 속성을 CKI가 가지게됨.
+
+            if(CKI.Key == ConsoleKey.D1)
             {
                 Console.WriteLine(" ");
                 Console.WriteLine("주점으로 이동합니다.");
